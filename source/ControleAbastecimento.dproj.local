@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/10/05 11:24:03.000.979,=C:\Users\marce\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/10/06 15:07:17.000.294,=C:\Users\marce\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/10/06 15:07:45.000.387,=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Visual\UPrincipal.pas</Transaction>
+    <Transaction>2023/10/06 15:08:10.000.731,=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Data\Data.Principal.pas</Transaction>
+    <Transaction>2023/10/06 15:09:52.000.918,C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\ControleAbastecimento.dproj=C:\Users\marce\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/10/06 16:56:23.000.881,=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit1.pas</Transaction>
+    <Transaction>2023/10/06 17:17:34.000.571,=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit2.pas</Transaction>
+    <Transaction>2023/10/06 18:27:35.000.571,C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Controle\Unit1.pas=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit1.pas</Transaction>
+    <Transaction>2023/10/06 18:28:20.000.461,C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Controle\uCalculadora.pas=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Controle\Unit1.pas</Transaction>
+    <Transaction>2023/10/06 18:41:17.000.719,=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit1.pas</Transaction>
+    <Transaction>2023/10/06 18:48:12.000.459,=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit2.pas</Transaction>
+    <Transaction>2023/10/06 19:02:13.000.466,C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Model\uBomba.pas=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit2.pas</Transaction>
+    <Transaction>2023/10/06 19:02:50.000.995,C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Controle\uUtil.pas=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit1.pas</Transaction>
+    <Transaction>2023/10/06 19:36:43.000.151,=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit1.pas</Transaction>
+    <Transaction>2023/10/06 19:55:03.000.876,C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Model\uPosto.pas=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit1.pas</Transaction>
+    <Transaction>2023/10/06 20:15:03.000.788,=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit1.pas</Transaction>
+    <Transaction>2023/10/06 20:19:58.000.770,C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Data\uDmPrincipal.pas=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit1.pas</Transaction>
+    <Transaction>2023/10/06 20:19:58.000.770,C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Data\uDmPrincipal.dfm=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit1.dfm</Transaction>
+    <Transaction>2023/10/06 20:20:28.000.352,C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Data\Data.Principal.pas=</Transaction>
+    <Transaction>2023/10/06 20:54:15.000.540,C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Data\uDmPrincipal.pas=</Transaction>
+    <Transaction>2023/10/06 20:55:17.000.479,=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Data\uDmPrincipal.pas</Transaction>
+    <Transaction>2023/10/07 13:54:14.000.028,=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit1.pas</Transaction>
+    <Transaction>2023/10/07 13:55:11.000.394,C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Visual\uRelAbastecimentos.pas=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit1.pas</Transaction>
+    <Transaction>2023/10/07 13:55:11.000.394,C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Visual\uRelAbastecimentos.dfm=C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Unit1.dfm</Transaction>
+    <Transaction>2023/10/07 18:53:42.000.147,C:\Users\marce\OneDrive\Documentos\GitHub\ProjetoFortes\source\Controle\uUtil.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

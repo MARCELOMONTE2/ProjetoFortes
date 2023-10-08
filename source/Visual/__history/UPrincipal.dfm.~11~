@@ -1,0 +1,431 @@
+object FrmPrincipal: TFrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de Cidades - Show Delphi'
+  ClientHeight = 515
+  ClientWidth = 1093
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Position = poDesktopCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  TextHeight = 13
+  object GroupBox1: TGroupBox
+    Left = 24
+    Top = 41
+    Width = 225
+    Height = 191
+    Margins.Top = 0
+    Margins.Bottom = 30
+    BiDiMode = bdLeftToRight
+    Caption = ' Bomba 1 - Gasolina'
+    Color = 10206463
+    DragCursor = crDefault
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentBackground = False
+    ParentBiDiMode = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object lblPreco1: TLabel
+      Left = 110
+      Top = 25
+      Width = 90
+      Height = 14
+      Caption = ' Preco: 3,579  '
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+      StyleName = 'Windows'
+    end
+    object Label5: TLabel
+      Left = 18
+      Top = 64
+      Width = 39
+      Height = 19
+      Caption = 'Litros'
+    end
+    object Label6: TLabel
+      Left = 18
+      Top = 104
+      Width = 37
+      Height = 19
+      Caption = 'Valor'
+    end
+    object edtLitrosB1: TEdit
+      Left = 83
+      Top = 68
+      Width = 121
+      Height = 27
+      Alignment = taRightJustify
+      DoubleBuffered = False
+      MaxLength = 15
+      ParentDoubleBuffered = False
+      TabOrder = 0
+      Text = '0'
+      OnExit = edtLitrosB1Exit
+      OnKeyPress = edtLitrosB1KeyPress
+    end
+    object edtValorB1: TEdit
+      Left = 83
+      Top = 101
+      Width = 121
+      Height = 27
+      Cursor = crIBeam
+      Alignment = taRightJustify
+      MaxLength = 15
+      TabOrder = 1
+      Text = '0'
+      OnKeyPress = edtLitrosB1KeyPress
+    end
+    object BitBtn1: TBitBtn
+      Left = 56
+      Top = 152
+      Width = 97
+      Height = 25
+      Cursor = crHandPoint
+      Caption = 'Lan'#231'ar'
+      Kind = bkOK
+      NumGlyphs = 2
+      TabOrder = 2
+      OnClick = BitBtn1Click
+    end
+  end
+  object BtnIncluir: TButton
+    Left = 41
+    Top = 480
+    Width = 75
+    Height = 25
+    Caption = 'Incluir'
+    TabOrder = 4
+    OnClick = BtnIncluirClick
+  end
+  object btnAlterar: TButton
+    Left = 122
+    Top = 480
+    Width = 75
+    Height = 25
+    Caption = 'Alterar'
+    TabOrder = 5
+  end
+  object BtnExcluir: TButton
+    Left = 203
+    Top = 480
+    Width = 75
+    Height = 25
+    Caption = 'Excluir'
+    TabOrder = 6
+    OnClick = BtnExcluirClick
+  end
+  object BtnSalvar: TButton
+    Left = 284
+    Top = 481
+    Width = 75
+    Height = 25
+    Caption = 'Salvar'
+    TabOrder = 7
+    OnClick = BtnSalvarClick
+  end
+  object BtnCancelar: TButton
+    Left = 365
+    Top = 480
+    Width = 75
+    Height = 25
+    Caption = 'Cancelar'
+    TabOrder = 8
+    OnClick = BtnCancelarClick
+  end
+  object GroupBox2: TGroupBox
+    Left = 255
+    Top = 41
+    Width = 225
+    Height = 191
+    Margins.Top = 0
+    Margins.Bottom = 30
+    BiDiMode = bdLeftToRight
+    Caption = ' Bomba 2 - Gasolina'
+    Color = 10206463
+    DragCursor = crDefault
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentBackground = False
+    ParentBiDiMode = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    object lblPreco2: TLabel
+      Left = 110
+      Top = 24
+      Width = 90
+      Height = 14
+      Caption = ' Preco: 3,579  '
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+      StyleName = 'Windows'
+    end
+    object Label2: TLabel
+      Left = 18
+      Top = 64
+      Width = 39
+      Height = 19
+      Caption = 'Litros'
+    end
+    object Label3: TLabel
+      Left = 18
+      Top = 104
+      Width = 37
+      Height = 19
+      Caption = 'Valor'
+    end
+    object Edit1: TEdit
+      Left = 83
+      Top = 68
+      Width = 121
+      Height = 27
+      Alignment = taRightJustify
+      MaxLength = 15
+      TabOrder = 0
+      OnKeyPress = edtLitrosB1KeyPress
+    end
+    object Edit2: TEdit
+      Left = 83
+      Top = 101
+      Width = 121
+      Height = 27
+      Cursor = crIBeam
+      Alignment = taRightJustify
+      MaxLength = 15
+      TabOrder = 1
+      OnKeyPress = edtLitrosB1KeyPress
+    end
+    object BitBtn2: TBitBtn
+      Left = 56
+      Top = 152
+      Width = 97
+      Height = 25
+      Cursor = crHandPoint
+      Caption = 'Lan'#231'ar'
+      Kind = bkOK
+      NumGlyphs = 2
+      TabOrder = 2
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 24
+    Top = 240
+    Width = 225
+    Height = 191
+    Margins.Top = 0
+    Margins.Bottom = 30
+    BiDiMode = bdLeftToRight
+    Caption = ' Bomba 3 - Diesel'
+    Color = 10206463
+    DragCursor = crDefault
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentBackground = False
+    ParentBiDiMode = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 2
+    object lblPreco3: TLabel
+      Left = 110
+      Top = 25
+      Width = 90
+      Height = 14
+      Caption = ' Preco: 3,579  '
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+      StyleName = 'Windows'
+    end
+    object Label7: TLabel
+      Left = 18
+      Top = 64
+      Width = 39
+      Height = 19
+      Caption = 'Litros'
+    end
+    object Label8: TLabel
+      Left = 18
+      Top = 104
+      Width = 37
+      Height = 19
+      Caption = 'Valor'
+    end
+    object Edit3: TEdit
+      Left = 83
+      Top = 68
+      Width = 121
+      Height = 27
+      Alignment = taRightJustify
+      MaxLength = 15
+      TabOrder = 0
+      OnKeyPress = edtLitrosB1KeyPress
+    end
+    object Edit4: TEdit
+      Left = 83
+      Top = 101
+      Width = 121
+      Height = 27
+      Cursor = crIBeam
+      Alignment = taRightJustify
+      MaxLength = 15
+      TabOrder = 1
+      OnKeyPress = edtLitrosB1KeyPress
+    end
+    object BitBtn3: TBitBtn
+      Left = 56
+      Top = 152
+      Width = 97
+      Height = 25
+      Cursor = crHandPoint
+      Caption = 'Lan'#231'ar'
+      Kind = bkOK
+      NumGlyphs = 2
+      TabOrder = 2
+    end
+  end
+  object GroupBox4: TGroupBox
+    Left = 255
+    Top = 240
+    Width = 225
+    Height = 191
+    Margins.Top = 0
+    Margins.Bottom = 30
+    BiDiMode = bdLeftToRight
+    Caption = ' Bomba 4 - Diesel'
+    Color = 10206463
+    DragCursor = crDefault
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentBackground = False
+    ParentBiDiMode = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 3
+    object lblPreco4: TLabel
+      Left = 110
+      Top = 25
+      Width = 90
+      Height = 14
+      Caption = ' Preco: 3,579  '
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+      StyleName = 'Windows'
+    end
+    object Label10: TLabel
+      Left = 18
+      Top = 64
+      Width = 39
+      Height = 19
+      Caption = 'Litros'
+    end
+    object Label11: TLabel
+      Left = 18
+      Top = 104
+      Width = 37
+      Height = 19
+      Caption = 'Valor'
+    end
+    object Edit5: TEdit
+      Left = 83
+      Top = 68
+      Width = 121
+      Height = 27
+      Alignment = taRightJustify
+      MaxLength = 15
+      TabOrder = 0
+      OnKeyPress = edtLitrosB1KeyPress
+    end
+    object Edit6: TEdit
+      Left = 83
+      Top = 101
+      Width = 121
+      Height = 27
+      Cursor = crIBeam
+      Alignment = taRightJustify
+      MaxLength = 15
+      TabOrder = 1
+      OnKeyPress = edtLitrosB1KeyPress
+    end
+    object BitBtn4: TBitBtn
+      Left = 56
+      Top = 152
+      Width = 97
+      Height = 25
+      Cursor = crHandPoint
+      Caption = 'Lan'#231'ar'
+      Kind = bkOK
+      NumGlyphs = 2
+      TabOrder = 2
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 496
+    Top = 49
+    Width = 569
+    Height = 382
+    DataSource = dsAbastecimentos
+    TabOrder = 9
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object dsBombas: TDataSource
+    DataSet = DmPrincipal.qBombas
+    OnDataChange = dsBombasDataChange
+    Left = 984
+    Top = 336
+  end
+  object dsAbastecimentos: TDataSource
+    DataSet = DmPrincipal.qAbastecimentos
+    Left = 840
+    Top = 408
+  end
+end

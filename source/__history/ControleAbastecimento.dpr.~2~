@@ -1,0 +1,17 @@
+program ControleAbastecimento;
+
+uses
+  Vcl.Forms,
+  UPrincipal in 'Visual\UPrincipal.pas' {FrmPrincipal},
+  Data.Principal in 'Data\Data.Principal.pas' {DtmPrincipal: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDtmPrincipal, DtmPrincipal);
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+
+  Application.Run;
+end.

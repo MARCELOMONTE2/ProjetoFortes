@@ -1,0 +1,165 @@
+unit UPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls,
+  Data.DB, Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons,uposto;
+
+type
+  TFrmPrincipal = class(TForm)
+    dsBombas: TDataSource;
+    GroupBox1: TGroupBox;
+    lblPreco1: TLabel;
+    edtLitros: TEdit;
+    Label5: TLabel;
+    Label6: TLabel;
+    edtValor: TEdit;
+    BitBtn1: TBitBtn;
+    BtnIncluir: TButton;
+    btnAlterar: TButton;
+    BtnExcluir: TButton;
+    BtnSalvar: TButton;
+    BtnCancelar: TButton;
+    GroupBox2: TGroupBox;
+    lblPreco2: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    BitBtn2: TBitBtn;
+    GroupBox3: TGroupBox;
+    lblPreco3: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    BitBtn3: TBitBtn;
+    GroupBox4: TGroupBox;
+    lblPreco4: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Edit5: TEdit;
+    Edit6: TEdit;
+    BitBtn4: TBitBtn;
+    procedure BtnIncluirClick(Sender: TObject);
+    procedure BtnExcluirClick(Sender: TObject);
+    procedure BtnSalvarClick(Sender: TObject);
+    procedure BtnCancelarClick(Sender: TObject);
+    procedure dsBombasDataChange(Sender: TObject; Field: TField);
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+     PostoABC : TPosto;
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+//uses
+ // uDmPrincipal;
+
+procedure TFrmPrincipal.BtnCancelarClick(Sender: TObject);
+begin
+  dsBombas.DataSet.Cancel;
+end;
+
+procedure TFrmPrincipal.BtnExcluirClick(Sender: TObject);
+begin
+  if (Application.MessageBox('Deseja realmente excluir este registro?',
+  'Confirmação', MB_ICONQUESTION + MB_USEGLYPHCHARS) = mrYes) then
+    dsBombas.DataSet.Delete;
+end;
+
+procedure TFrmPrincipal.BtnIncluirClick(Sender: TObject);
+begin
+  dsBombas.DataSet.Append;
+  //EdtNome.SetFocus;
+end;
+
+procedure TFrmPrincipal.BtnSalvarClick(Sender: TObject);
+begin
+  dsBombas.DataSet.Post;
+end;
+
+procedure TFrmPrincipal.dsBombasDataChange(Sender: TObject; Field: TField);
+begin
+ { EdtNome.Enabled := DSCidade.DataSet.State in [dsInsert, dsEdit];
+  EdtUF.Enabled := DSCidade.DataSet.State in [dsInsert, dsEdit];
+
+  BtnIncluir.Enabled := not (DSCidade.DataSet.State in [dsInsert, dsEdit]);
+
+  BtnAlterar.Enabled := ((not (DSCidade.DataSet.State in [dsInsert, dsEdit])) and
+  (not (DSCidade.DataSet.IsEmpty)));
+
+  BtnExcluir.Enabled := ((not (DSCidade.DataSet.State in [dsInsert, dsEdit])) and
+  (not (DSCidade.DataSet.IsEmpty)));
+
+  BtnSalvar.Enabled := DSCidade.DataSet.State in [dsInsert, dsEdit];
+  BtnCancelar.Enabled := DSCidade.DataSet.State in [dsInsert, dsEdit];  }
+end;
+
+procedure TFrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+ PostoABC.Destroy;
+end;
+
+procedure TFrmPrincipal.FormCreate(Sender: TObject);
+begin
+  PostoABC := TPosto.create;
+
+  if not (dsBombas.DataSet.Active) then
+    dsBombas.DataSet.Open;
+
+   //carrega os dados daas bombas
+  while not dsBombas.DataSet.Eof do
+  begin
+    case dsBombas.DataSet.FieldByName('ID').AsInteger of
+      1:begin
+        PostoABC.Bomba1.ID := dsBombas.DataSet.FieldByName('ID').AsInteger;
+        PostoABC.Bomba1.Descricao := dsBombas.DataSet.FieldByName('DESCRICAO').AsString;
+        PostoABC.Bomba1.Tanque := dsBombas.DataSet.FieldByName('TANQUE').AsInteger;
+        PostoABC.Bomba1.Preco:= dsBombas.DataSet.FieldByName('PRECO').AsFloat;
+        PostoABC.Bomba1.Taxa_Imposto := dsBombas.DataSet.FieldByName('TAXA_IMPOSTO').AsFloat;
+
+      end;
+      2: Begin
+        PostoABC.Bomba2.ID := dsBombas.DataSet.FieldByName('ID').AsInteger;
+        PostoABC.Bomba2.Descricao := dsBombas.DataSet.FieldByName('DESCRICAO').AsString;
+        PostoABC.Bomba2.Tanque := dsBombas.DataSet.FieldByName('TANQUE').AsInteger;
+        PostoABC.Bomba2.Preco:= dsBombas.DataSet.FieldByName('PRECO').AsFloat;
+        PostoABC.Bomba2.Taxa_Imposto := dsBombas.DataSet.FieldByName('TAXA_IMPOSTO').AsFloat;
+      End;
+      3: Begin
+        PostoABC.Bomba3.ID := dsBombas.DataSet.FieldByName('ID').AsInteger;
+        PostoABC.Bomba3.Descricao := dsBombas.DataSet.FieldByName('DESCRICAO').AsString;
+        PostoABC.Bomba3.Tanque := dsBombas.DataSet.FieldByName('TANQUE').AsInteger;
+        PostoABC.Bomba3.Preco:= dsBombas.DataSet.FieldByName('PRECO').AsFloat;
+        PostoABC.Bomba3.Taxa_Imposto := dsBombas.DataSet.FieldByName('TAXA_IMPOSTO').AsFloat;
+      End;
+      4: Begin
+        PostoABC.Bomba4.ID := dsBombas.DataSet.FieldByName('ID').AsInteger;
+        PostoABC.Bomba4.Descricao := dsBombas.DataSet.FieldByName('DESCRICAO').AsString;
+        PostoABC.Bomba4.Tanque := dsBombas.DataSet.FieldByName('TANQUE').AsInteger;
+        PostoABC.Bomba4.Preco:= dsBombas.DataSet.FieldByName('PRECO').AsFloat;
+        PostoABC.Bomba4.Taxa_Imposto := dsBombas.DataSet.FieldByName('TAXA_IMPOSTO').AsFloat;
+      End;
+    end;
+     dsBombas.DataSet.Next;
+  end;
+
+  lblPreco1.Caption := 'Preço: ' + FloatToStr(PostoABC.Bomba1.Preco);
+  lblPreco2.Caption := 'Preço: ' + FloatToStr(PostoABC.Bomba2.Preco);
+  lblPreco3.Caption := 'Preço: ' + FloatToStr(PostoABC.Bomba3.Preco);
+  lblPreco4.Caption := 'Preço: ' + FloatToStr(PostoABC.Bomba4.Preco);
+end;
+
+end.

@@ -1,0 +1,21 @@
+program ControleAbastecimento;
+
+uses
+  Vcl.Forms,
+  UPrincipal in 'Visual\UPrincipal.pas' {FrmPrincipal},
+  uCalculadora in 'Controle\uCalculadora.pas',
+  uBomba in 'Model\uBomba.pas',
+  uPosto in 'Model\uPosto.pas',
+  uDmPrincipal in 'Data\uDmPrincipal.pas' {DmPrincipal: TDataModule},
+  uRelAbastecimentos in 'Visual\uRelAbastecimentos.pas' {FrmRelAbastecimentos};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDmPrincipal, DmPrincipal);
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TFrmRelAbastecimentos, FrmRelAbastecimentos);
+  Application.Run;
+end.

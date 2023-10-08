@@ -1,0 +1,93 @@
+unit UPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls,
+  Data.DB, Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons;
+
+type
+  TFrmPrincipal = class(TForm)
+    dsBombas: TDataSource;
+    GroupBox1: TGroupBox;
+    lclPreco: TLabel;
+    edtLitros: TEdit;
+    Label5: TLabel;
+    Label6: TLabel;
+    edtValor: TEdit;
+    BitBtn1: TBitBtn;
+    BtnIncluir: TButton;
+    btnAlterar: TButton;
+    BtnExcluir: TButton;
+    BtnSalvar: TButton;
+    BtnCancelar: TButton;
+    procedure BtnIncluirClick(Sender: TObject);
+    procedure BtnExcluirClick(Sender: TObject);
+    procedure BtnSalvarClick(Sender: TObject);
+    procedure BtnCancelarClick(Sender: TObject);
+    procedure dsBombasDataChange(Sender: TObject; Field: TField);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  Data.Principal;
+
+procedure TFrmPrincipal.BtnCancelarClick(Sender: TObject);
+begin
+  dsBombas.DataSet.Cancel;
+end;
+
+procedure TFrmPrincipal.BtnExcluirClick(Sender: TObject);
+begin
+  if (Application.MessageBox('Deseja realmente excluir este registro?',
+  'Confirmação', MB_ICONQUESTION + MB_USEGLYPHCHARS) = mrYes) then
+    dsBombas.DataSet.Delete;
+end;
+
+procedure TFrmPrincipal.BtnIncluirClick(Sender: TObject);
+begin
+  dsBombas.DataSet.Append;
+  //EdtNome.SetFocus;
+end;
+
+procedure TFrmPrincipal.BtnSalvarClick(Sender: TObject);
+begin
+  dsBombas.DataSet.Post;
+end;
+
+procedure TFrmPrincipal.dsBombasDataChange(Sender: TObject; Field: TField);
+begin
+ { EdtNome.Enabled := DSCidade.DataSet.State in [dsInsert, dsEdit];
+  EdtUF.Enabled := DSCidade.DataSet.State in [dsInsert, dsEdit];
+
+  BtnIncluir.Enabled := not (DSCidade.DataSet.State in [dsInsert, dsEdit]);
+
+  BtnAlterar.Enabled := ((not (DSCidade.DataSet.State in [dsInsert, dsEdit])) and
+  (not (DSCidade.DataSet.IsEmpty)));
+
+  BtnExcluir.Enabled := ((not (DSCidade.DataSet.State in [dsInsert, dsEdit])) and
+  (not (DSCidade.DataSet.IsEmpty)));
+
+  BtnSalvar.Enabled := DSCidade.DataSet.State in [dsInsert, dsEdit];
+  BtnCancelar.Enabled := DSCidade.DataSet.State in [dsInsert, dsEdit];  }
+end;
+
+procedure TFrmPrincipal.FormCreate(Sender: TObject);
+begin
+  if not (dsBombas.DataSet.Active) then
+    dsBombas.DataSet.Open;
+end;
+
+end.

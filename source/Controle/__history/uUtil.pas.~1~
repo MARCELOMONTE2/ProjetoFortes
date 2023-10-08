@@ -1,0 +1,22 @@
+unit uUtil;
+
+interface
+
+uses
+   System.SysUtils;
+
+type
+  TUtil = class(TObject)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    class function BuscaDadosBomba(Bomba: integer): tBomba;
+    class function CalculaValor (Litros, Preco: double): double;
+    class function CalculaImposto(Valor, taxa: double): double;
+end;
+
+
+implementation
+
+end.

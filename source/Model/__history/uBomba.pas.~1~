@@ -1,0 +1,31 @@
+
+unit uBomba;
+
+interface
+  uses SysUtils;
+
+  Type
+
+  TBomba = class
+  private
+    FID: Integer;
+    FDescricao: String;
+    FTanque: Integer;
+    FPreco: double;
+    FTaxa_Imposto: double;
+
+  public
+    property ID           :Integer read FID write FID;
+    property Descricao    :String read FDescricao write FDescricao;
+    property Tanque       :Integer read FTanque write FTanque;
+    property Preco        :double read FPreco write FPreco;
+    property Taxa_Imposto :double read FTaxa_Imposto write FTaxa_Imposto;
+
+
+
+
+  end;
+
+implementation
+
+end.

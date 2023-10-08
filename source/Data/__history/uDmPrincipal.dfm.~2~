@@ -1,0 +1,38 @@
+object DmPrincipal: TDmPrincipal
+  OnCreate = DataModuleCreate
+  Height = 480
+  Width = 640
+  object FbConect: TFDConnection
+    Params.Strings = (
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'Server=127.0.0.1'
+      'CharacterSet=WIN1252'
+      
+        'Database=C:\Users\marce\OneDrive\Documentos\Exemplo FireDac\db\P' +
+        'OSTO.FDB'
+      'Port=3050'
+      'DriverID=FB')
+    Connected = True
+    LoginPrompt = False
+    Left = 40
+    Top = 24
+  end
+  object qBombas: TFDQuery
+    Connection = FbConect
+    UpdateOptions.AssignedValues = [uvGeneratorName]
+    UpdateOptions.GeneratorName = 'GEN_BOMBAS_ID'
+    UpdateOptions.UpdateTableName = 'BOMBAS'
+    UpdateOptions.KeyFields = 'ID'
+    UpdateOptions.AutoIncFields = 'ID'
+    SQL.Strings = (
+      'select * from BOMBAS')
+    Left = 32
+    Top = 96
+  end
+  object FDPhysFBDriverLink1: TFDPhysFBDriverLink
+    VendorLib = 'C:\Program Files\Firebird\Firebird_3_0\WOW64\fbclient.dll'
+    Left = 136
+    Top = 24
+  end
+end
