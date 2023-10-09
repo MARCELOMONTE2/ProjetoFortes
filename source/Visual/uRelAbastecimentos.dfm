@@ -184,6 +184,7 @@ object FrmRelAbastecimentos: TFrmRelAbastecimentos
       Top = 162
       Width = 718
       Height = 80
+      DataFields = 'ID'
       object RLBandDetalhe: TRLBand
         Left = 0
         Top = 0
